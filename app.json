@@ -1,0 +1,38 @@
+{
+  "name": "Ghost on Heroku",
+  "description": "Just a blogging platform",
+  "logo": "https://cdn.rawgit.com/TryGhost/Ghost-Admin/61fe83dff375a145d5272a5382aa2c72bd994830/public/assets/img/large.png",
+  "repository": "https://github.com/cobyism/ghost-on-heroku",
+  "success_url": "/ghost",
+  "addons": [
+    "heroku-postgresql",
+    "mailgun"
+  ],
+  "env": {
+    "HEROKU_URL": {
+      "description": "The URL of this Heroku app.",
+      "value": "https://YOURAPPNAME.herokuapp.com"
+    },
+    "GD_PRIVATE_KEY_ID": {
+      "description": "Set your Google Drive Private Key ID to enable Google Drive file storage. Leave blank to disable file uploads.",
+      "required": false
+    },
+    "GD_PRIVATE_KEY": {
+      "description": "Google Drive Private Key, if using Google Drive file storage.",
+      "required": false
+    },
+    "GD_CLIENT_EMAIL": {
+      "description": "Google Drive Client Email, if using Google Drive file storage.",
+      "required": false
+    },
+    "GD_CLIENT_ID": {
+      "description": "Google Drive Client ID, if using Google Drive file storage.",
+      "required": false
+    },
+    "PGSSLMODE": {
+      "description": "PostgreSQL SSL connection mode. Set to 'require' to force SSL. Unset it to use the default.",
+      "required": false,
+      "value": "require"
+    }
+  }
+}
